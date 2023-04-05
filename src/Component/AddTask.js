@@ -37,10 +37,10 @@ class AddTask extends Component {
 
     render() {
         return (
-        <div>
-            <form  onSubmit={this.HandleSubmit}>
-                <input type="text" placeholder='Add Task Here' onChange={this.HandleInput} />
-                <button>Submit</button>
+        <div className='p-2 m-3'>
+            <form className='form-group' onSubmit={this.HandleSubmit}>
+                <input className='form-control-sm w-25' type="text" placeholder='Add Task Here' onChange={this.HandleInput} />
+                <button className='btn-primary'>Add Task</button>
             </form>
             <br />
             <div>{this.state.nameList.map((x,index) => <ShowList removeItem = {this.RemoveItem} ind = {index} key={index}  name={x}/> )}</div>

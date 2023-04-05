@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import Complete from './Complete'
 import Delete from './Delete'
+import './ShowList.css';
 
 class ShowList extends Component {
 
@@ -28,10 +29,10 @@ isCompleted = ()=> {
 
  render() {
     return (
-      <div>
+      <div className='p-2 ml-5 mr-5 mb-3 border border-secondary rounded bgColor'>
         {this.props.name}
         <Delete removeItem = {this.props.removeItem} index={this.props.ind}/>
-        <button onClick={() => this.isCompleted()}>{this.state.isComplete?'Incomplete' : 'Complete'}</button>
+        <button className='btn-primary' onClick={() => this.isCompleted()}>{this.state.isComplete?'Incomplete' : 'Complete'}</button>
       </div>
     )
   }
